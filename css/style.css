@@ -40,7 +40,7 @@ body {
 }
 
 .card__container {
-  width: 300px;
+  width: 350px;
   overflow: hidden;
   border-radius: 15px;
   background-color: white;
@@ -168,6 +168,9 @@ body {
     background-repeat: no-repeat;
   }
 
+  .card__plan-img{
+    margin-right: 20px;
+  }
   .card__container {
     width: 250px;
   }
