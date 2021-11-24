@@ -1,0 +1,191 @@
+
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+  
+  body {
+     font-family: 'Kumbh Sans', sans-serif;
+     font-family: 'Red Hat Display', sans-serif;
+     background-color: var(--Pale-blue);
+     background-image: url(../images/pattern-background-desktop.svg);
+     background-repeat: no-repeat;
+     
+    background-size: 100vw;
+  }
+
+  .flex{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      
+  }
+
+.card__container{
+    width: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow:0px 5px 15px  rgba(0, 0, 0, 0.212);
+    &-img{
+        width: 100%;
+        display: block;
+    }
+
+    &-body{
+        
+            text-align: center;
+            letter-spacing: 1px;
+            
+              
+        }
+        
+
+    &-paragraph{
+        color: var(--Desaturated-blue);
+        font-size: 10px;
+        line-height: 15px;
+        font-weight: 700;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    .card__plan{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 20px;
+        
+       
+        img{
+            width: 30px;
+            margin-left: -10px;
+            margin-top: -10px;
+        }
+
+        &-total{
+            
+            // background-color: aqua;
+            margin-left: -40px;
+            text-align: left;
+
+            h2{
+                font-size: 11px;
+                font-weight: 900;
+                letter-spacing: 0px;
+                margin-top: -0px;
+            }
+            
+            p{
+                margin-top: -5px;
+                color: var(--Desaturated-blue);
+                letter-spacing: 0px;
+                font-size: 11px;
+                font-weight: 500;
+            }
+           
+        }
+
+        &-change{
+            color: var(--Dark-blue);
+            font-weight: 700;
+            margin-top: -10px;
+            
+        }
+        &-change:hover{
+            color: var(--Desaturated-blue);
+        }
+    }
+    .pago{
+        display: flex;
+        margin-top: 40px;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+    }
+
+
+        
+       
+    .card__plan-a{
+        text-decoration: none;
+        
+        background-color: var(--Bright-blue);
+        padding: 1rem 7.0rem;
+        border-radius: 7px;
+        box-shadow:0px 10px 10px  rgba(0, 0, 0, 0.212);
+        color: var(--Pale-blue);
+        font-weight: 900;
+        transform: opacity;
+        transition-duration: 0.5s;
+    }
+    .card__plan-a:hover{
+        opacity: 0.5;
+    }
+
+    .card__container-payment-cancel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 30px;
+        margin-top: 35px;
+        padding-bottom: 40px;
+        
+        a{
+            color: var(--Desaturated-blue);
+            text-decoration: none;
+            font-weight: 900;
+            letter-spacing:0px;
+        }
+        a:hover{
+            color: var(--Dark-blue);
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    body{
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+
+    }
+    .card__container{
+        width: 250px;
+    }
+    .pago{
+        
+        width: 100%;
+        margin: 0 auto; 
+        .card__plan-a{
+            padding: 5px 50px;
+        }
+    }
+   
+}
+@media screen and (max-width: 375px){
+    .card__plan-a{
+           padding: 0px 0px;
+        }
+    .card__container-payment{
+        display: flex;
+        
+    }
+}
